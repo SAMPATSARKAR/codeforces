@@ -1,4 +1,4 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 #define int long long
 int32_t main(){
@@ -20,11 +20,24 @@ int32_t main(){
         int l=0;
         int r=n-1;
         int ans=0;
+        // while(l<r){
+        //     while(l<n && s[l]!='L'){
+        //         l++;
+        //     }
+        //     while(r>=0 && s[r]!='R'){
+        //         r--;
+        //     }
+        //     if(l<r){
+        //         ans+=(arr[r+1]-arr[l]);
+        //         l++;
+        //         r--;
+        //     }
+        // }
         while(l<r){
-            while(l<n && arr[l]!='l'){
+            while(l<n && s[l]!='L'){
                 l++;
             }
-            while(r<n && arr[r]!='r'){
+            while(r>=0 && s[r]!='R'){
                 r--;
             }
             if(l<r){
