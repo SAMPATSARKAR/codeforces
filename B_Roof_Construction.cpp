@@ -10,9 +10,27 @@ int main() {
 
     while (t--) {
         int n;cin>>n;
+        int p;
+        int n1=n-1,count=0;
+        while(n1>0){
+            n1=n1>>1;
+            count++;
+        }
+        p=pow(2,count-1);
+        vector<int> v;
+        for(int i=1;i<p;i++){
+            v.push_back(i);
+        } 
+        v.push_back(0);
+        for(int i=p;i<n;i++){
+            v.push_back(i);
+        }
         for(int i=0;i<n;i++){
-            cout<<i<<" ";
-        }cout<<endl;
+            cout<<v[i]<<" ";
+        }
+        cout<<endl;
+
+
     }
 
     return 0;
